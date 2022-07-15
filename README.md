@@ -34,7 +34,7 @@ Cài đặt SSH Server được cung cấp bởi component openssh-server từ O
 sudo apt install openssh-server
 ```
 ![image](https://user-images.githubusercontent.com/48356049/179161956-463fa81c-3bc8-4992-bf09-fef7f2e2efbc.png)
-##Bước 2: Kiểm tra trạng thái của server
+## Bước 2: Kiểm tra trạng thái của server
 Khi quá trình tải xuống và cài đặt gói hoàn tất, dịch vụ SSH sẽ chạy, nhưng để chắc chắn, chúng ta cần kiểm tra trạng thái nó bằng
 ```markdown
 service ssh status
@@ -49,7 +49,7 @@ Nếu dịch không chạy, phải kích hoạt bằng lệnh sau
 ```markdown
 sudo systemctl enable --now ssh
 ```
-##Bước 3: Cho phép SSH thông qua tường lửa (firewall)
+## Bước 3: Cho phép SSH thông qua tường lửa (firewall)
 Để cấu hình UFW sao cho nó cho phép truy cập mong muốn, bạn cần chạy lệnh sau:
 ```markdown
 sudo ufw allow ssh
@@ -62,7 +62,7 @@ Có thể kiểm tra trạng thái của UFW đang chạy bằng lệnh:
 ```markdown
 sudo ufw status
 ```
-###Kết nối remote system
+### Kết nối remote system
 Cài đặt openssh-client bằng câu lệnh
 ```markdown
 sudo apt install openssh-client
@@ -87,6 +87,7 @@ Ngay lập tức SSH cho bạn biết rằng máy chủ đã được thêm vĩn
 
 _Đã thêm máy chủ lưu trữ, bây giờ hãy nhập mật khẩu_
 Cuối cùng, bạn đã đăng nhập thành công vào Ubuntu Remote System của mình
-###Đóng kết nối SSH
+### Đóng kết nối SSH
 Để đóng kết nối, bạn chỉ cần nhập **exit** và nó sẽ đóng ngay lập tức mà không cần yêu cầu xác nhận.
 ![image](https://user-images.githubusercontent.com/48356049/179166395-113cc559-a7f9-4e4e-9712-7ec718136584.png)
+
