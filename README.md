@@ -90,3 +90,4 @@ Cuối cùng, bạn đã đăng nhập thành công vào Ubuntu Remote System c�
 ###Đóng kết nối SSH
 Để đóng kết nối, bạn chỉ cần nhập **exit** và nó sẽ đóng ngay lập tức mà không cần yêu cầu xác nhận.
 ![image](https://user-images.githubusercontent.com/48356049/179166395-113cc559-a7f9-4e4e-9712-7ec718136584.png)
+
