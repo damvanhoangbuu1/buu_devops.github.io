@@ -3,6 +3,17 @@
 SSH là một giao thức mạng được mã hóa bảo mật, nó tạo ra kết nối bảo mật (tạo ra một đường hầm tách biệt với với cách dịch vụ khác để duy trì kết nối riêng tư giữa máy trạm và máy chủ) trên một mạng lưới không bảo mật. SSH cũng được hiểu như ứng dụng dùng để kết nối đăng nhập vào một hệ thống máy tính bởi người dùng.
 ![Image](https://raw.githubusercontent.com/xuanthulabnet/learn-ssh/master/imgs/ssh-01.png)
 
+```markdown
+Giao thức SSH được dùng ở rất nhiều nền tảng từ Linux, macOs, Windows với các mục đích như:
+
+  -Đăng nhập vào shell của máy tính từ xa (máy chủ)
+  -Thi hành lệnh trên máy kết nối
+  -Thiết lập tự động đăng nhập vào server
+  -Truyền tải file an toàn
+  -Gắn một thư mục ở máy từ xa (máy chủ) vào máy client
+...
+```
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
