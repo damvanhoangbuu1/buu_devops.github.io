@@ -76,14 +76,14 @@ Kiểm tra địa chỉ IP của server bằng lệnh:
 ip a
 ```
 ![image](https://user-images.githubusercontent.com/48356049/179164157-71d07235-cb2f-4af7-a8f2-4fea366aed97.png)<br>
-_Sử dụng "ip a" để tìm địa chỉ IP_
-Lần đầu tiên bạn kết nối với máy chủ SSH, nó sẽ yêu cầu quyền thêm máy chủ. Nhập yes và nhấn Enter để tiếp tục.
+_Sử dụng "ip a" để tìm địa chỉ IP_<br>
+Lần đầu tiên bạn kết nối với máy chủ SSH, nó sẽ yêu cầu quyền thêm máy chủ. Nhập yes và nhấn Enter để tiếp tục.<br>
 ![image](https://user-images.githubusercontent.com/48356049/179164290-6b8418fa-6f55-4b56-bd95-2f9b1ceeaa6c.png)<br>
-_Lần đầu tiên kết nối với máy chủ_
-Ngay lập tức SSH cho bạn biết rằng máy chủ đã được thêm vĩnh viễn và sau đó yêu cầu nhập mật khẩu được gán cho username. Nhập mật khẩu và nhấn Enter một lần nữa.
+_Lần đầu tiên kết nối với máy chủ_<br>
+Ngay lập tức SSH cho bạn biết rằng máy chủ đã được thêm vĩnh viễn và sau đó yêu cầu nhập mật khẩu được gán cho username. Nhập mật khẩu và nhấn Enter một lần nữa.<br>
 ![image](https://user-images.githubusercontent.com/48356049/179164475-b16af5b9-a2d8-4694-9d32-0d87d5d5dadf.png)<br>
-_Đã thêm máy chủ lưu trữ, bây giờ hãy nhập mật khẩu_
-Cuối cùng, bạn đã đăng nhập thành công vào Ubuntu Remote System của mình
+_Đã thêm máy chủ lưu trữ, bây giờ hãy nhập mật khẩu_<br>
+Cuối cùng, bạn đã đăng nhập thành công vào Ubuntu Remote System của mình<br>
 ## Đóng kết nối SSH
 Để đóng kết nối, bạn chỉ cần nhập **exit** và nó sẽ đóng ngay lập tức mà không cần yêu cầu xác nhận.
 ![image](https://user-images.githubusercontent.com/48356049/179166395-113cc559-a7f9-4e4e-9712-7ec718136584.png)
