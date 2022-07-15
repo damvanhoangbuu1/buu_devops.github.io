@@ -62,7 +62,7 @@ Có thể kiểm tra trạng thái của UFW đang chạy bằng lệnh:
 ```markdown
 sudo ufw status
 ```
-###Kết nối remote system
+### Kết nối remote system
 Cài đặt openssh-client bằng câu lệnh
 ```markdown
 sudo apt install openssh-client
@@ -87,7 +87,7 @@ Ngay lập tức SSH cho bạn biết rằng máy chủ đã được thêm vĩn
 
 _Đã thêm máy chủ lưu trữ, bây giờ hãy nhập mật khẩu_
 Cuối cùng, bạn đã đăng nhập thành công vào Ubuntu Remote System của mình
-###Đóng kết nối SSH
+### Đóng kết nối SSH
 Để đóng kết nối, bạn chỉ cần nhập **exit** và nó sẽ đóng ngay lập tức mà không cần yêu cầu xác nhận.
 ![image](https://user-images.githubusercontent.com/48356049/179166395-113cc559-a7f9-4e4e-9712-7ec718136584.png)
 
