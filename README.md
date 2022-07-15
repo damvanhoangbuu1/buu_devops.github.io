@@ -1,6 +1,7 @@
-## Dịch vụ SSH
+## Giao thức Secure Shell (SSH)
 
-Giới thiệu và cài đặt dịch vụ ssh
+SSH là một giao thức mạng được mã hóa bảo mật, nó tạo ra kết nối bảo mật (tạo ra một đường hầm tách biệt với với cách dịch vụ khác để duy trì kết nối riêng tư giữa máy trạm và máy chủ) trên một mạng lưới không bảo mật. SSH cũng được hiểu như ứng dụng dùng để kết nối đăng nhập vào một hệ thống máy tính bởi người dùng.
+![Image](https://raw.githubusercontent.com/xuanthulabnet/learn-ssh/master/imgs/ssh-01.png)
 
 ### Markdown
 
