@@ -57,3 +57,6 @@ Region Table: https://aws.amazon.com/about-aws/global-infrastructure/regional-pr
     - Action: list of actions this policy allows or denies
     - Resource: list of resources to which the actions applied to
     - Condition: conditions for when this policy is in effect (optional)
+
+![image](https://user-images.githubusercontent.com/48356049/194013032-7e84d861-19de-4908-8672-a05c080c186e.png)
+
