@@ -104,11 +104,78 @@ Sau khi chọn mục Instance trên menu thì ta có giao diện làm việc nh�
 
 ![image](https://user-images.githubusercontent.com/48356049/198334661-ba24ffe4-39fb-4cc3-92a4-a4dabe034661.png)
 
+## EC2 Instance Types - Overview
+- Bạn có thể sử dụng các loại phiên bản EC2 khác nhau được tối ưu hóa cho các trường hợp sử dụng khác nhau (https://aws.amazon.com/ec2/instance-types/)
+- AWS có quy ước đặt tên sau:
 
+![image](https://user-images.githubusercontent.com/48356049/198423560-5a56b484-df7f-4580-a692-23a7c4227190.png)
 
+    - m: instance class
+    - 5: thế hệ (AWS cải thiện chúng theo thời gian)
+    - 2xlarge: kích thước trong instance class
+    
+ ## EC2 Instance Types - Mục đích chung
+ 
+- Sự đa dạng của khối lượng công việc như máy chủ web servers hoặc code repositories
+- Cân bằng giữa:
+    - Máy tính
+    - Kỉ niệm
+    - Kết nối mạng
 
+## EC2 Instance Types - Compute Optimized
+ 
+ - Thích hợp cho các tác vụ máy tính đòi hỏi hiệu suất cao bộ xử lý:
+    - Khối lượng công việc xử lý hàng loạt
+    - Chuyển mã phương tiện
+    - Web server hiệu suất cao
+    - Tính toán hiệu suất cao (HPC)
+    - Mô hình hóa Khoa học & học máy
+    - Máy chủ chơi game chuyên dụng
+    - Game server chuyên dụng
 
+## EC2 Instance Types - Memory Optimized
+- Hiệu suất nhanh chóng đối với khối lượng công việc xử lý các tập dữ liệu lớn trong bộ nhớ
+- Trường hợp sử dụng:
+    - Hiệu suất cao, cơ sở dữ liệu quan hệ / không quan hệ
+    - Lưu trữ bộ nhớ cache quy mô web phân tán
+    - Cơ sở dữ liệu trong bộ nhớ được tối ưu hóa cho BI (kinh doanh thông minh)
+    - Các ứng dụng thực hiện xử lý thời gian thực đối với dữ liệu lớn không có cấu trúc
 
+## EC2 Instance Types – Storage Optimized
+- Tuyệt vời cho các tác vụ lưu trữ nhiều đòi hỏi quyền truy cập cao, đọc và ghi tuần tự vào các tập dữ liệu lớn trên bộ nhớ cục bộ
+- Trường hợp sử dụng:
+    - Hệ thống xử lý giao dịch trực tuyến tần số cao (OLTP)
+    - Cơ sở dữ liệu quan hệ & NoSQL
+    - Bộ nhớ đệm cho cơ sở dữ liệu trong bộ nhớ (ví dụ: Redis)
+    - Ứng dụng kho dữ liệu
+    - Hệ thống tệp phân tán
+## EC2 Instance Types: example
+![image](https://user-images.githubusercontent.com/48356049/198430089-2a98b5d7-cfed-472e-871b-1d50b8ad2a0a.png)
+
+## Giới thiệu về Security Groups
+- Security Groups là nền tảng của bảo mật mạng trong AWS
+- Chúng kiểm soát cách thức lưu lượng truy cập được phép vào hoặc ra khỏi EC2 Instance.
+- Security Groups chỉ chứa các quy tắc
+- Các quy tắc Security Groups có thể tham chiếu theo IP hoặc theo Security Groups
+## Security Groups Deeper Dive
+- Các nhóm bảo mật đang hoạt động như một "tường lửa" trên các phiên bản EC2
+- Chúng điều chỉnh:
+- Quyền truy cập vào các cổng
+- Dải IP được phép - IPv4 và IPv6
+- Kiểm soát mạng gửi đến (từ instance khác)
+- Kiểm soát mạng gửi đi (từ instance này sang instance khác)
+![image](https://user-images.githubusercontent.com/48356049/198433246-673dfc41-70fa-4d47-8a77-ec351390cdc1.png)
+## Security Groups Diagram
+![image](https://user-images.githubusercontent.com/48356049/198433559-d391869d-aec2-404a-8149-1fb7a0df80fe.png)
+## Security Groups - những điều cần biết
+- Có thể được gắn vào nhiều instance
+- Bị khóa đối với kết hợp khu vực / VPC
+- Trực tiếp "bên ngoài" EC2 - nếu giao thông bị chặn, phiên bản EC2 sẽ không nhìn thấy nó
+- Nên duy trì một nhóm bảo mật riêng biệt để truy cập SSH
+- Nếu ứng dụng của bạn không thể truy cập được (hết thời gian chờ) thì đó là vấn đề của nhóm bảo mật
+- Nếu ứng dụng của bạn gặp lỗi “kết nối bị từ chối” thì đó là lỗi ứng dụng hoặc ứng dụng chưa được khởi chạy
+- Tất cả lưu lượng đến đều bị chặn theo mặc định
+- Tất cả lưu lượng đi ra ngoài đều được cho phép theo mặc định
 
 
 
