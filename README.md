@@ -167,15 +167,6 @@ Sau khi chọn mục Instance trên menu thì ta có giao diện làm việc nh�
 ![image](https://user-images.githubusercontent.com/48356049/198433246-673dfc41-70fa-4d47-8a77-ec351390cdc1.png)
 ## Security Groups Diagram
 ![image](https://user-images.githubusercontent.com/48356049/198433559-d391869d-aec2-404a-8149-1fb7a0df80fe.png)
-## Security Groups - những điều cần biết
-- Có thể được gắn vào nhiều instance
-- Bị khóa đối với tổ hợp khu vực / VPC
-- Trực tiếp "bên ngoài" EC2 - nếu giao thông bị chặn, phiên bản EC2 sẽ không nhìn thấy nó
-- Nên duy trì một nhóm bảo mật riêng biệt để truy cập SSH
-- Nếu ứng dụng của bạn không thể truy cập được (hết thời gian chờ) thì đó là vấn đề của nhóm bảo mật
-- Nếu ứng dụng của bạn gặp lỗi “kết nối bị từ chối” thì đó là lỗi ứng dụng hoặc ứng dụng chưa được khởi chạy
-- Tất cả lưu lượng đến đều bị chặn theo mặc định
-- Tất cả lưu lượng đi ra ngoài đều được cho phép theo mặc định
 
 
 
