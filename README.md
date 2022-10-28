@@ -105,7 +105,7 @@ Sau khi chọn mục Instance trên menu thì ta có giao diện làm việc nh�
 ![image](https://user-images.githubusercontent.com/48356049/198334661-ba24ffe4-39fb-4cc3-92a4-a4dabe034661.png)
 
 ## EC2 Instance Types - Overview
-- Bạn có thể sử dụng các loại phiên bản EC2 khác nhau được tối ưu hóa cho các trường hợp sử dụng khác nhau (https://aws.amazon.com/ec2/instance-types/)
+- Bạn có thể sử dụng các EC2 Instance Type khác nhau được tối ưu hóa cho các trường hợp sử dụng khác nhau (https://aws.amazon.com/ec2/instance-types/)
 - AWS có quy ước đặt tên sau:
 
 ![image](https://user-images.githubusercontent.com/48356049/198423560-5a56b484-df7f-4580-a692-23a7c4227190.png)
@@ -118,9 +118,9 @@ Sau khi chọn mục Instance trên menu thì ta có giao diện làm việc nh�
  
 - Sự đa dạng của khối lượng công việc như máy chủ web servers hoặc code repositories
 - Cân bằng giữa:
-    - Máy tính
-    - Kỉ niệm
-    - Kết nối mạng
+    - Compute
+    - Memory
+    - Networking
 
 ## EC2 Instance Types - Compute Optimized
  
@@ -130,7 +130,6 @@ Sau khi chọn mục Instance trên menu thì ta có giao diện làm việc nh�
     - Web server hiệu suất cao
     - Tính toán hiệu suất cao (HPC)
     - Mô hình hóa Khoa học & học máy
-    - Máy chủ chơi game chuyên dụng
     - Game server chuyên dụng
 
 ## EC2 Instance Types - Memory Optimized
@@ -142,7 +141,7 @@ Sau khi chọn mục Instance trên menu thì ta có giao diện làm việc nh�
     - Các ứng dụng thực hiện xử lý thời gian thực đối với dữ liệu lớn không có cấu trúc
 
 ## EC2 Instance Types – Storage Optimized
-- Tuyệt vời cho các tác vụ lưu trữ nhiều đòi hỏi quyền truy cập cao, đọc và ghi tuần tự vào các tập dữ liệu lớn trên bộ nhớ cục bộ
+- Thích hợp cho các tác vụ lưu trữ nhiều đòi hỏi quyền truy cập cao, đọc và ghi tuần tự vào các tập dữ liệu lớn trên bộ nhớ cục bộ
 - Trường hợp sử dụng:
     - Hệ thống xử lý giao dịch trực tuyến tần số cao (OLTP)
     - Cơ sở dữ liệu quan hệ & NoSQL
@@ -158,18 +157,19 @@ Sau khi chọn mục Instance trên menu thì ta có giao diện làm việc nh�
 - Security Groups chỉ chứa các quy tắc
 - Các quy tắc Security Groups có thể tham chiếu theo IP hoặc theo Security Groups
 ## Security Groups Deeper Dive
-- Các nhóm bảo mật đang hoạt động như một "tường lửa" trên các phiên bản EC2
+- Các nhóm bảo mật đang hoạt động như một "firewall" trên các phiên bản EC2
 - Chúng điều chỉnh:
-- Quyền truy cập vào các cổng
-- Dải IP được phép - IPv4 và IPv6
-- Kiểm soát mạng gửi đến (từ instance khác)
-- Kiểm soát mạng gửi đi (từ instance này sang instance khác)
+    - Quyền truy cập vào các cổng
+    - Dải IP được phép - IPv4 và IPv6
+    - Kiểm soát inbound network (từ instance khác)
+    - Kiểm soát outbound network (từ instance này sang instance khác)
+ 
 ![image](https://user-images.githubusercontent.com/48356049/198433246-673dfc41-70fa-4d47-8a77-ec351390cdc1.png)
 ## Security Groups Diagram
 ![image](https://user-images.githubusercontent.com/48356049/198433559-d391869d-aec2-404a-8149-1fb7a0df80fe.png)
 ## Security Groups - những điều cần biết
 - Có thể được gắn vào nhiều instance
-- Bị khóa đối với kết hợp khu vực / VPC
+- Bị khóa đối với tổ hợp khu vực / VPC
 - Trực tiếp "bên ngoài" EC2 - nếu giao thông bị chặn, phiên bản EC2 sẽ không nhìn thấy nó
 - Nên duy trì một nhóm bảo mật riêng biệt để truy cập SSH
 - Nếu ứng dụng của bạn không thể truy cập được (hết thời gian chờ) thì đó là vấn đề của nhóm bảo mật
