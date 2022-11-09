@@ -168,9 +168,3 @@ Sau khi chọn mục Instance trên menu thì ta có giao diện làm việc nh�
 ## Security Groups Diagram
 ![image](https://user-images.githubusercontent.com/48356049/198433559-d391869d-aec2-404a-8149-1fb7a0df80fe.png)
 
-A
-A
-A
-A
-A
-
