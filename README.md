@@ -1,3 +1,16 @@
-# EC2 Instance Storage
-
-
+Những service cần focus:
+- IAM
+- EC2
+- EBS/EFS
+- RDS
+- Route 53
+- VPC
+- AutoScaling
+- ELB
+- S3
+- Cloud front
+- ECS
+- BeanStalk
+- Lamda 
+- KMS (sơ sơ ) 
+- SNS/SQS 
