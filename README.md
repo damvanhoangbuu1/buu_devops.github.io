@@ -1,20 +1,19 @@
-# EC2
-## SSH Overview
-### SSH Summary Table
-![image](https://user-images.githubusercontent.com/48356049/200762852-09f19b19-25fc-4686-a872-a3f5bb4be366.png)
-### EC2 Instance Roles
-![image](https://user-images.githubusercontent.com/48356049/203492764-026ec090-389b-4d4a-a65f-75771bbcbfe5.png)
+# EC2 Instance Storage
+## EBS 
+- Amazon Elastic Block Store (EBS) là một dịch vụ lưu trữ dạng block dễ sử dụng và hiệu năng cao, được thiết kế để sử dụng với Amazon Elastic Compute Cloud (EC2) cho các khối lượng công việc đòi hỏi tốc độ giao dịch và thông lượng cao ở mọi quy mô.
+### Lợi thế của EBS
+- Có độ trễ thấp (low-latency performance): Bằng cách sử dụng SSD EBS, nó cung cấp hiệu suất I/O đáng tin cậy, tối ưu nhu cầu khối lượng công việc và dung lượng lưu trữ.
+- EBS đảm bảo tất cả dữ liệu của bạn được bảo vệ. Vì nó cho phép các instances duy trì dữ liệu, thông qua Snapshot, ngay cả khi instances đó có bị terminate đi nữa.
+- Khả năng lưu trữ an toàn và khả dụng cao: EBS volumes cung cấp dung lượng dự phòng trong AZ, kiểm soát truy cập và mã hóa tăng cường bảo mật.
+- Thay đổi vị trí địa lý: Với EBS, bạn có thể duplicate snapshot qua khắp các regions, có thể đặt tài nguyên và dữ liệu ở nhiều vị trí khác nhau. Phục vụ cho khôi phục data sau thảm họa, ...
+- EBS có thể nhanh chóng scale up or down volumes, đảm bảo bạn sẽ nhận được hiệu suất và dung lượng phù hợp cho các nhu cầu đang thay đổi.
+### Sử dụng EBS như thế nào
+- 1 EBS muốn được sử dụng, bắt buộc phải gắn nó vào 1 EC2 instance.
+- EBS cũng thuộc về 1 AZ cụ thể. Ví dụ EBS A thuộc AZ "abc", nhưng instance B thuộc AZ "cde" thì không thể nào gắn EBS A cho instance B được.
+- 1 EBS chỉ có thể attach tới 1 instance tại 1 thời điểm.
 
-Nguyên tắc là không bao giờ đăng nhập trực tiếp (bảo mật) --> sử dụng user role để đăng nhập
+![image](https://user-images.githubusercontent.com/48356049/203505704-e0255dff-4384-4e59-8e70-09cc01c68993.png)
 
-- Cách add Roles vào EC2 Instance:
-  B1. Chọn EC2 Instance cần thêm Roles --> Action --> Security --> Modify IAM Roles --> Có giao diện như hình dưới
-  
-![image](https://user-images.githubusercontent.com/48356049/203493764-27f444a2-078b-4ce4-8a96-94dd7eb7a0c3.png)
-
-  B2. Chọn IAM Roles được tạo sẵn có trong khung đỏ 
-  
-  ![image](https://user-images.githubusercontent.com/48356049/203494086-de72c386-879f-48c3-b9bf-4a867ed43cc8.png)
-
-* Lưu ý: IAM Roles EC2 Instance cần có Policy AMReadOnlyAccess
-
+### Note
+Đơn giản, hãy xem EBS như 1 USB có gắn mạng
+Free tier: 30GB free mỗi tháng cho option General Purpose SSD (gp2) hoặc Magnetic
